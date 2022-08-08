@@ -1,5 +1,6 @@
 import pygsheets
 import telebot
+import pytz
 from telebot import types
 from datetime import datetime
 
@@ -45,7 +46,7 @@ def process_timein(message):
     numfound = int(len(finduser))
     if numfound >= 1:
         try:
-            now = datetime.now()
+            now = datetime.now(pytz.timezone('Asia/Manila'))
             date_time = now.strftime("%H:%M:%S")
             time = now.strftime("%H:%M:%S")
             date = now.strftime('%m/%d/%Y')
@@ -88,7 +89,7 @@ def process_timein(message):
 # Timeout
 def process_timeout(message):
     try:
-        now2 = datetime.now()
+        now2 = datetime.now(pytz.timezone('Asia/Manila'))
         date_time2 = now2.strftime("%H:%M:%S")
         time = now2.strftime("%H:%M:%S")
         timeout = message.text 
@@ -126,7 +127,7 @@ def process_timecheck(message):
         user_first_name = str(message.chat.first_name) 
         user_last_name = str(message.chat.last_name)
         full_name = user_first_name + " "+ user_last_name
-        now = datetime.now()
+        now = datetime.now(pytz.timezone('Asia/Manila'))
         date = now.strftime('%m/%d/%Y')
         sheet_data = wks.get_all_records()
         num = 1
