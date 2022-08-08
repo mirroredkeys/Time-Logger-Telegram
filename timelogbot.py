@@ -5,7 +5,7 @@ from datetime import datetime
 
 # video tutorial google sheet = https://www.youtube.com/watch?v=anqwLrVPBYg
 # pygsheets
-service_file = r'C:\Users\bit\Desktop\autobot\autobot-357606-2c6c0d27a1b7.json'
+service_file = r'autobot-357606-2c6c0d27a1b7.json'
 gc = pygsheets.authorize(service_file=service_file)
 sheetname = 'NexLogicIn'
 sh = gc.open(sheetname)
