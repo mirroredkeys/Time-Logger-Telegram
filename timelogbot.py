@@ -128,7 +128,7 @@ def process_timecheck(message):
         user_last_name = str(message.chat.last_name)
         full_name = user_first_name + " "+ user_last_name
         now = datetime.now(pytz.timezone('Asia/Manila'))
-        date = now.strftime('%B %d %Y')
+        date = now.strftime('%m/%d/%Y')
         sheet_data = wks.get_all_records()
         num = 1
         for i in range(len(sheet_data)):
