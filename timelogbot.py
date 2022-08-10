@@ -117,7 +117,7 @@ def process_timeout(message):
         bot.reply_to(message, 'UwU Weong Command')
 
 
-# StatusCheck
+# TimeCheck
 @bot.message_handler(commands=['timecheck'])
 def process_timecheck(message):
     username = message.chat.username
@@ -128,16 +128,16 @@ def process_timecheck(message):
         user_last_name = str(message.chat.last_name)
         full_name = user_first_name + " "+ user_last_name
         now = datetime.now(pytz.timezone('Asia/Manila'))
-        date = now.strftime('%m/%d/%Y')
+        date = now.strftime('%B %d,%Y')
         sheet_data = wks.get_all_records()
         num = 1
         for i in range(len(sheet_data)):
             num += 1
             if full_name == sheet_data[i].get("Name") and date == sheet_data[i].get("Date") and sheet_data[i].get("Timein")!= '' and sheet_data[i].get("Timeout")!= '':
-                bot.reply_to(message, f'Date: {date}\nTimein: {sheet_data[i].get("Timein")}\nTimeout: {sheet_data[i].get("Timeout")}')
+                bot.reply_to(message, f'{date}\nTimein: {sheet_data[i].get("Timein")}\nTimeout: {sheet_data[i].get("Timeout")}')
                 break
             elif full_name == sheet_data[i].get("Name") and date == sheet_data[i].get("Date") and sheet_data[i].get("Timein")!= '' and sheet_data[i].get("Timeout")== '':
-                bot.reply_to(message, f'Date: {date}\nTimein: {sheet_data[i].get("Timein")}\nTimeout: NONE')
+                bot.reply_to(message, f'{date}\nTimein: {sheet_data[i].get("Timein")}\nTimeout: NONE')
                 break
         else:
             bot.reply_to(message, "You haven't timed in yet today")
