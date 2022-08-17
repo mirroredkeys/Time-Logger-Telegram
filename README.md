@@ -1,4 +1,4 @@
-#python version used
+#python version used: 
 Python 3.10.5
 
 #App Installation/Execution Procedures
