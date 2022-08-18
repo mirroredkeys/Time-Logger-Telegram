@@ -1,6 +1,6 @@
 # Time-Logger-Telegram 
 Python 3.10.5
-
+- - - - 
 App Installation/Execution Procedures:
 
 download and open the file
