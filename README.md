@@ -7,13 +7,9 @@ download and open the file
 
 activate the virtual environment in bash terminal
 - - - - 
-
-change the following to your own:
-
-.json file,⋅⋅
- 
- spreadsheet name,⋅⋅
-
-API token⋅⋅
+*change the following to your own:
+  *.json file
+  *spreadsheet name
+  *API token
 
 then run..⋅⋅
