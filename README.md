@@ -1,6 +1,11 @@
 # Time-Logger-Telegram 
 Python 3.10.5
 - - - - 
+
+## Package(s) Used ##
+
+    pip install pygsheets
+    
 App Installation/Execution Procedures:
 
 download and open the file
