@@ -14,7 +14,7 @@ Python 3.10.5
 3. install package(s)
 
 - - - - 
-* change the following to your own:
+* change the following with your own:
     * .json file
     * spreadsheet name
     * API token 
