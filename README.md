@@ -9,7 +9,7 @@ Python 3.10.5
 #### App Installation/Execution Procedures:
 1. download and open the file
 2. activate virtual environment in bash terminal
-    2. to activate: source venv/Scripts/activate
+    1. to activate: source venv/Scripts/activate
 3. install package(s)
 
 - - - - 
