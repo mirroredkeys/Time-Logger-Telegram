@@ -1,4 +1,4 @@
-# Time Logger Telegram Bot
+# Telegram Time Logger Bot
 Python 3.10.5
 - - - - 
 
